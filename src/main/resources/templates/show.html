@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<style>body {
+
+    background-color:lightgreen;
+}
+nav{
+    color: darkgoldenrod;
+}
+</style>
+
+<body>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="/">
+
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="list.html">home</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="jobform.html">form</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="show.html">show</a>
+        </li>
+<li>
+        <form action="/add">
+            Search: <input type="text" name=""><br>
+            <input type="submit" value="Submit">
+        </form>
+</li>
+    </ul>
+
+</nav>
+
+<a href="src/main/resources/templates/show.html:55">Show All Job</a><br />
+Title :<span th:text="${job.title}"></span><br />
+Description :<span th:text="${job.description}"></span><br />
+postDate :<span th:text="${job.postdate}"></span><br />
+author:<span th:text="${job.author}"></span><br />
+phone :<span th:text="${job.phone}"></span><br />
+Features :<span th:text="${job.features}"></span><br />
+<a th:href="@{/delete/{id}(id=${course.id})}">Delete this course</a>
+
+</body>
+</html>
